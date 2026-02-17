@@ -1,0 +1,9 @@
+flask
+kaggle
+matplotlib
+numpy
+opencv-python-headless
+pillow
+scikit-learn
+streamlit
+tensorflow

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live Camera - Face Mask Detector</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light;
+      --bg-1: #f7efe5;
+      --bg-2: #eaf3ff;
+      --ink: #1b1b1f;
+      --muted: #5d5f68;
+      --card: #ffffff;
+      --line: #e3e5ea;
+      --accent: #ff6b3d;
+      --accent-2: #1f6feb;
+      --shadow: 0 16px 40px rgba(27, 27, 31, 0.12);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      background: radial-gradient(1100px 600px at 15% 10%, var(--bg-2), transparent 60%),
+        radial-gradient(900px 600px at 90% 0%, #ffe7d6, transparent 55%),
+        var(--bg-1);
+      color: var(--ink);
+    }
+    a {
+      color: var(--accent-2);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 20px 48px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      animation: fadeUp 0.7s ease-out;
+    }
+    h1 {
+      font-family: "DM Serif Display", "Times New Roman", serif;
+      font-size: clamp(2rem, 3vw, 2.6rem);
+      margin-top: 0;
+    }
+    .muted {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      margin-top: 16px;
+    }
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #fff1eb;
+      color: #a14a2b;
+      font-weight: 600;
+    }
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+      <div class="toolbar">
+        <div>
+          <div class="badge">Live Camera</div>
+          <h1>Real-time mask detection</h1>
+          <p class="muted">This uses your webcam and highlights only masked faces in real time.</p>
+        </div>
+        <a href="/">Back to upload</a>
+      </div>
+      <img src="/video_feed" alt="Live camera feed" />
+    </div>
+  </div>
+</body>
+</html>
